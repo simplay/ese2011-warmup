@@ -8,25 +8,24 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		User u1 = new User("hans");
-		User u2 = new User("marc");
-		@SuppressWarnings("deprecation")
-		Date d1 = new Date(1, 1, 1);
-		@SuppressWarnings("deprecation")
-		Date d2 = new Date(1, 1, 2);
-		@SuppressWarnings("deprecation")
-		Date d3 = new Date(1, 1, 3);
+		TestCases tests = new TestCases();
 		
-		u2.calendar.addEvent(d1, d2, "test1", true);
-		u2.calendar.addEvent(d1, d2, "test2", false);
-		u2.calendar.addEvent(d1, d2, "test3", true);
-		u2.calendar.addEvent(d2, d2, "test4", true);
-		u2.calendar.addEvent(d1, d2, "test5", true);
+		// calendar tests
+		tests.testCalendar_hasEntries();
+		tests.testCalendar_hasEvents();
+		tests.testCalendar_iterator();
+		tests.testCalendar_iterator2();
+		tests.testCalendar_iterator3();
+		tests.testCalendar_list();
+		tests.testCalendar_list2();
+		tests.testCalendar_list3();
 		
+		// event tests
+		tests.testEvent_hasEntries();
+		tests.testEvent_visibility();
 		
-		LinkedList<Event> es = u2.calendar.getDayEvents(d2, u1);
-		for(Event e : es) System.out.println(e.name);
-		
+		// user tests
+		tests.testUser_SetName();
 	}
 
 }

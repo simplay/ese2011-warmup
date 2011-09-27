@@ -14,9 +14,17 @@ public class Calendar {
 		events = new LinkedList<Event>();
 	}
 	
+	public User getOwner(){
+		return this.owner;
+	}
+	
 	public void addEvent(Date startDate, Date endDate, String name, boolean is_visible){
 		Event ev = new Event(startDate, endDate, name, is_visible);
 		events.add(ev);
+	}
+	
+	public void addEvent(Event e){
+		events.add(e);
 	}
 	
 	/**
