@@ -1,11 +1,8 @@
-import java.util.Date;
-import java.util.LinkedList;
-
-
 public class Main {
 
 	/**
 	 * @param args
+	 * @author simplaY
 	 */
 	public static void main(String[] args) {
 		TestCases tests = new TestCases();
@@ -27,5 +24,4 @@ public class Main {
 		// user tests
 		tests.testUser_SetName();
 	}
-
 }

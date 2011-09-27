@@ -1,6 +1,5 @@
 import java.util.Date;
 
-
 public class Event {
 	public Date start;
 	public Date end;
